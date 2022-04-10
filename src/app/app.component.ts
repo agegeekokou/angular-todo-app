@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-todo-app';
+
+  public itemData: string[] = [];
+  onSubmit(myForm: any){
+    console.log(myForm.form.value.task); 
+    this.itemData.push(myForm.form.value.task);
+
+
+  }
 }
